@@ -1,3 +1,7 @@
+import random
+
+
+#YOUR CODE HERE
 def spin_twister_spinner():
   """
   Returns a list with a random color, side, and appendage
@@ -6,10 +10,12 @@ def spin_twister_spinner():
   sides: "left" or "right"
   appendage: "hand" or "foot"
   """
-  #YOUR CODE HERE
-  return
+  colors = ["red", "green", "yellow", "blue"]
+  sides = ["left", "right"]
+  appendages = ["hand", "foot"]
+  return [random.choice(colors), random.choice(sides), random.choice(appendages)]
 
 # Here's the function call. This should print a random assortment of twister commands
-for _ in range(10):
-  
-print(spin_twister_spinner())
+if __name__ == "__main__":
+  for _ in range(10):
+    print(spin_twister_spinner())
